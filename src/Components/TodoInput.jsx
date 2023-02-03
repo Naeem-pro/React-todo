@@ -1,12 +1,12 @@
-import { isDisabled } from "@testing-library/user-event/dist/utils";
 import React, { Component } from "react";
-import { toast, ToastContainer } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 class TodoInput extends Component {
   state = {};
   render() {
-    const { item, handleChange, handleSubmit, editItem, disabled } = this.props;
+    const { item, handleChange, handleSubmit, handleEdit, disabled } =
+      this.props;
     return (
       <form onSubmit={handleSubmit}>
         <div className="form-group">
@@ -21,10 +21,10 @@ class TodoInput extends Component {
         </div>
         <button
           type="submit"
-          className="btn btn-block btn-primary mt-3"
+          className="btn btn-block btn-primary mt-3 w-100"
           disabled={disabled}
         >
-          {editItem ? "edit item" : "Add item"}
+          {handleEdit ? "edit item" : "Add item"}
         </button>
         <ToastContainer />
       </form>

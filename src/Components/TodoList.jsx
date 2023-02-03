@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import TodoItem from "./TodoItem";
-import { v4 as uuid } from "uuid";
-import { isDisabled } from "@testing-library/user-event/dist/utils";
 
 class TodoList extends Component {
   state = {};
