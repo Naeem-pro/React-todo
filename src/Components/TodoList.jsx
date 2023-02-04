@@ -8,7 +8,7 @@ class TodoList extends Component {
     console.log("itmes", itmes);
     return (
       <ul className="list-group mt-5">
-        <h3 className="text-capitalize text-center"> Todo List</h3>
+       {itmes.length? <h3 className="text-capitalize text-center"> Todo List</h3>:""}
         {itmes.map((item) => {
           return (
             <TodoItem

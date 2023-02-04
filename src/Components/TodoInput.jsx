@@ -24,7 +24,7 @@ class TodoInput extends Component {
           className="btn btn-block btn-primary mt-3 w-100"
           disabled={disabled}
         >
-          {handleEdit ? "edit item" : "Add item"}
+          {handleEdit ? "Edit item" : "Add item"}
         </button>
         <ToastContainer />
       </form>
